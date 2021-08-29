@@ -30,26 +30,26 @@ COPY_FILES() {
 	rm -rf ~/.termux;
         mkdir -p ~/.termux/;
         if [ "$version" -le 7 ]; then
-                rm -rf $PREFIX/share/figlet/Basic.flf
+                rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
                 cp .object/color*.* .object/font*.* ~/.termux/
                 cp .object/termux.properties2 ~/.termux/termux.properties
-                cp .object/Basic.flf $PREFIX/share/figlet/
+                cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
 		cp .banner.sh ~/
 		termux-reload-settings
 
         else
-                rm -rf $PREFIX/share/figlet/Basic.flf
+                rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
                 cp .object/color*.* .object/font*.* ~/.termux/;
-                cp .object/Basic.flf $PREFIX/share/figlet/
+                cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
                 cp .object/termux.properties ~/.termux/
 		cp .banner.sh ~/
 		termux-reload-settings
         fi
 	if [ "$version1" -eq 10 ]; then
-		rm -rf $PREFIX/share/figlet/Basic.flf
+		rm -rf $PREFIX/share/figlet/ASCII-Shadow.flf
 		cp .object/color*.* .object/font*.* ~/.termux/;
 		cp .object/termux.properties ~/.termux/
-		cp .object/Basic.flf $PREFIX/share/figlet/
+		cp .object/ASCII-Shadow.flf $PREFIX/share/figlet/
 		cp .banner.sh ~/
 		termux-reload-settings
 	fi
@@ -80,7 +80,7 @@ else
 wget https://raw.githubusercontent.com/remo7777/REMO773/master/Remo773.flf &> /dev/null;
 sleep 3
 cp Remo773.flf $PREFIX/share/figlet/Remo773.flf;
-cp Basic.flf $PREFIX/share/figlet/Basic.flf;
+cp ASCII-Shadow.flf $PREFIX/share/figlet/ASCII-Shadow.flf;
 sleep 3
 rm Remo773.flf
 fi
@@ -131,7 +131,7 @@ clear
 TNAME="$PROC";
 col=$(tput cols)
 echo ;
-#figlet -f Basic "$PROC" | lolcat;
+#figlet -f ASCII-Shadow "$PROC" | lolcat;
 bash ~/T-Header/.banner.sh ${col} ${TNAME}
 echo "";
 #echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
@@ -159,7 +159,7 @@ cat >> ~/.zshrc <<-EOF
 tput cnorm
 clear
 ## terminal banner
-#figlet -f Basic.flf "$PROC" | lolcat;
+#figlet -f ASCII-Shadow.flf "$PROC" | lolcat;
 echo
 ## cursor
 printf '\e[4 q'
