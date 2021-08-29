@@ -139,7 +139,7 @@ echo "";
 #echo -e '\e[0;35m+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[00m';
 echo "";
 echo -e "
-\033[0;31m─\e[1;90m❯RISHU\033[0m "
+\033[0;37m$\e[1;92mRISHU/e[1;90m-❯\033[0m "
 
 tput setaf 3
 read -p  "Do you want to setup this ? (y/n) " PROC32
@@ -168,7 +168,7 @@ TNAME="$PROC"
 setopt prompt_subst
 
 PROMPT=$'
-%{\e[0;31m%}─ %{\e[1;90m%}❯RISHU%{\e[0m%}%b '
+%{\e[0;31m%}$%{\e[1;92m%}RISHU%{\e[1;90m%}-❯%{\e[0m%}%b '
 
 ## Replace 'ls' with 'exa' (if available) + some aliases.
 if [ -n "\$(command -v exa)" ]; then
