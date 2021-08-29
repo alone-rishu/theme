@@ -168,7 +168,7 @@ TNAME="$PROC"
 setopt prompt_subst
 
 PROMPT=$'
-%{\e[0;31m%}$%{\e[1;92m%}RISHU%{\e[1;90m%}-❯%{\e[0m%}%b '
+%{\e[0;37m%}$%{\e[1;92m%}RISHU%{\e[1;90m%}-❯%{\e[0m%}%b '
 
 ## Replace 'ls' with 'exa' (if available) + some aliases.
 if [ -n "\$(command -v exa)" ]; then
